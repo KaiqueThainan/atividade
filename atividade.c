@@ -1,39 +1,84 @@
 #include <stdio.h>
 
+void soma (float num1, float num2){
+	float resultado;
+		resultado= num1 + num2;
+	printf("O resultado é:%2.f", resultado);
+	
+}
+
+void sub (float num1, float num2){
+        float resultado;
+   	resultado= num1 - num2;
+	printf("o resultado é:%2.f", resultado);
+}
+
+void mult (float num1, float num2){
+	float resultado;
+	resultado= num1 * num2;
+	printf("o resultado é:%2.f", resultado);
+
+}
+
+void div (float num1, float num2){
+	float resultado;
+	//if(num2 == 0){
+	//printf("erro Divi por 0\n");
+	//}else{
+	resultado= num1 / num2;
+	//printf("o resultado é:%2.f", resultado);
+	//}	
+	}
+float valor (){
+
+	float numero; 
+		printf("Digite um numero");
+		scanf("%f",&numero);
+		return numero; 		
+
+
+}
+
+
 void main() {
     char operacao;
-    float resultado, num1, num2;
     int cont;
     
     cont= 1;
 while(cont){
-    printf("Digite o primeiro numero: ");
-    scanf("%f", &num1);
+    //valor(); num1;
+    //printf("Digite o primeiro numero: ");
+    //scanf("%f", &num1);
     printf("Escolha a operacao (+, -, *, /): ");
     scanf(" %c", &operacao);
-    printf("Digite o segundo numero: ");
-    scanf("%f", &num2);
+    // valor(); num2;
+    //printf("Digite o segundo numero: ");
+    //scanf("%f", &num2);
 
     switch(operacao) {
         case '+':
-            resultado = num1 + num2;
-            printf("Resultado: %.2f\n", resultado);
-            break;
+		soma(valor(),valor());
+            //resultado = num1 + num2;
+           //printf("Resultado: %.2f\n", resultado);
+           break;
         case '-':
-            resultado = num1 - num2;
-            printf("Resultado: %.2f\n", resultado);
+		sub(valor(),valor());
+            //resultado = num1 - num2;
+            //printf("Resultado: %.2f\n", resultado);
             break;
         case '*':
-            resultado = num1 * num2;
-            printf("Resultado: %.2f\n", resultado);
+	    mult(valor(),valor());
+            //resultado = num1 * num2;
+            //printf("Resultado: %.2f\n", resultado);
             break;
         case '/':
-            if (num2 != 0) {
+	    div(valor(),valor());
+            /*if (num2 != 0) {
                 resultado = num1 / num2;
                 printf("Resultado: %.2f\n", resultado);
             } else {
                 printf("Erro: Não pode conter número 0\n");
-            }
+            }*/
             break;
         default:
             printf("Operacao invalida\n");
